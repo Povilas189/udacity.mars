@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use("/", express.static(path.join(__dirname, "../public")));
 
 // get rover name
-app.get("get rover name", async (req, res) => {
+app.get("/getRoverName", async (req, res) => {
   try {
     let rover = await fetch(
       `${marsPhotosApi}api_key=${process.env.API_KEY}`
@@ -26,7 +26,7 @@ app.get("get rover name", async (req, res) => {
   }
 });
 // get rovers photos info
-app.get("get rover cameras and photos info", async (req, res) => {
+app.get("/getRoverCamerasAndPhotosInfo", async (req, res) => {
   try {
     let response = await fetch(
       `${marsPhotosApi}/manifests/${req}api_key=${process.env.API_KEY}`
