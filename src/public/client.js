@@ -21,7 +21,12 @@ const App = (state) => {
   let { rovers, apod } = state;
 
   return `
-        <header></header>
+        <header>
+         <div class="banner">
+        <img class="banner-img" src= ${ImageOfTheDay(apod)}/>
+        <h1 class="banner-text">Photo of day</h1>
+        </div>
+        </header>
         <main>
             ${Greeting(store.user.name)}
             <section>
@@ -35,10 +40,14 @@ const App = (state) => {
                     explanation are returned. These keywords could be used as auto-generated hashtags for twitter or instagram feeds;
                     but generally help with discoverability of relevant imagery.
                 </p>
-                ${ImageOfTheDay(apod)}
+               
             </section>
         </main>
-        <footer></footer>
+        <footer>
+         <h6>
+          This page was made possible by the <a href="https://learn.udacity.com/">udacity.<br>They provide all necessary knowledge.</a>
+        </h6>
+        </footer>
     `;
 };
 
