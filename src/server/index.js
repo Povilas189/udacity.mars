@@ -25,7 +25,17 @@ app.get("get rover name", async (req, res) => {
     console.log("error:", err);
   }
 });
-
+// get rovers photos info
+app.get("get rover cameras and photos info", async (req, res) => {
+  try {
+    let response = await fetch(
+      `${marsPhotosApi}/manifests/${req}api_key=${process.env.API_KEY}`
+    ).then((res) => res.json());
+    console.log(response);
+  } catch (err) {
+    console.log("error:", err);
+  }
+});
 // example API call
 app.get("/apod", async (req, res) => {
   try {
