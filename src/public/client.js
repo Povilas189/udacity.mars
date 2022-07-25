@@ -45,7 +45,7 @@ const App = (state) => {
         <header>
             <div class="banner">
             <img class="banner-img" src=${img}>
-            <h1 class="banner-text">Photo of day</h1>
+            <h1 class="banner-text">Select your rover!</h1>
             </div>
             ${Nav(roverNames, selectedRover)}
         </header>
