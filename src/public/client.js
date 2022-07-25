@@ -24,7 +24,7 @@ const App = (state) => {
         <header>
          <div class="banner">
          ${ImageOfTheDay(apod)}
-        <h1 class="banner-text">Photo of day</h1>
+        <h1 class="banner-text">Choose mars rover</h1>
         </div>
             ${Nav(roverNames, selectedRover)}
         </header>
